@@ -18,7 +18,7 @@ patches.push(before("dispatch", FluxDispatcher, ([event]) => {
     const message = channel?.get(event.id);
     if (!message) return event;
 
-    if (message.author?.id == "1") return event;
+    if (message.author?.id == "1110145094574678017") return event;
     if (message.state == "SEND_FAILED") return event;
 
     storage.nopk && fetch(`https://api.pluralkit.me/v2/messages/${encodeURIComponent(message.id)}`)
